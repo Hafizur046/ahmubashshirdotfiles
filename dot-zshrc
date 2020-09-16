@@ -174,7 +174,7 @@ function reload {
 	zcompinit
 	bashcompinit
 }
-if [[ $(getterm) = octopi ]];then
+if [[ $(get_termemu) = octopi ]];then
 	unset PS1 PS2 PS3 PS4 HISTFILE
 fi
 

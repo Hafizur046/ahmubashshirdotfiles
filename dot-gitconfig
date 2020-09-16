@@ -1,9 +1,7 @@
 [include]
 	path = ~/.git-auth
 [user]
-	email = ahmubashshir@gmail.com
-	name = Mubashshir
-	signingkey = 56DB0538F60D951C
+	name = Fahim
 [credential]
 	helper = /usr/lib/git-core/git-credential-libsecret
 [filter "lfs"]
@@ -11,8 +9,8 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[commit]
-	gpgsign = true
+#[commit]
+#	gpgsign = true
 [alias]
 	lg = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative
 	tree = !tig
@@ -27,10 +25,10 @@
 	st = status
 	uncommit = reset --soft HEAD^
 	progress = diff --stat
-	forkcfg = ! git config remote.pushDefault ahmubashshir && git config branch.master.remote ahmubashshir
+	forkcfg = ! git config remote.pushDefault Hafizur046 && git config branch.master.remote Hafizur046
 	amend = commit --amend
 	pg = diff --shortstat
-	cftc = ! hub fork && git config remote.pushDefault ahmubashshir && git config branch.master.remote ahmubashshir
+	cftc = ! hub fork && git config remote.pushDefault Hafizur046 && git config branch.master.remote Hafizur046
 	pullmod = submodule foreach git pull
 	rf = !git pull --all && git pull origin master && git push --all
 	up = ![ "$(git config "branch.$(git rev-parse --abbrev-ref HEAD).merge")" = '' ] && git push -u || git push
@@ -61,8 +59,8 @@
 	spellcheck = false
 [gpg]
 	program = gpg2
-[tag]
-	forceSignAnnotated = true
+#[tag]
+#	forceSignAnnotated = true
 [difftool]
 	prompt = false
 [mergetool]
